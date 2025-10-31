@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Empowering the Nation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="courses.html"><i class="fa-solid fa-graduation-cap"></i> Courses</a>
+      <a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a>
+      <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+      <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+      <input type="search" id="searchInput" placeholder="Search courses..." aria-label="Search site" />
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+ <section class="hero">
+  <div class="hero-overlay">
+    <div class="hero-content container">
+      <div class="hero-text">
+        <h1>Empowering the Nation</h1>
+        <p>Unlock your potential with practical skills for real-world success</p>
+        <div class="hero-buttons">
+          <button class="btn-primary"><i class="fa-solid fa-file-invoice-dollar"></i> Get a Quote</button>
+          <button class="btn-secondary" onclick="location.href='courses.html'"><i class="fa-solid fa-arrow-right"></i> Browse Courses</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="IMAGE/Logoo.png" alt="Empowering the Nation Logo" />
+      </div>
+    </div>
+  </div>
+</section>
+<div class="scroll-cue">
+  <i class="fa-solid fa-chevron-down"></i>
+</div>
+
+
+  <!-- Available Courses -->
+  <section class="available-courses">
+    <h2>Available Courses</h2>
+    <p>Click below to view full course details and enroll</p>
+    <button onclick="location.href='courses.html'">View All Courses</button>
+
+    <div class="course-list">
+  <div class="course">
+    <img src="IMAGE/FIRST-AID.png" alt="First Aid" />
+    <button class="add-to-cart" data-id="first-aid" data-name="First Aid" data-price="1500">Add to Cart</button>
+    <p><strong>First Aid</strong><br>Duration: 6 months | Price: R1500</p>
+    <a href="first-aid.html" class="learn-more">Learn More</a>
+  </div>
+
+  <div class="course">
+    <img src="IMAGE/SEWING.png" alt="Sewing" />
+    <button class="add-to-cart" data-id="sewing" data-name="Sewing" data-price="1500">Add to Cart</button>
+    <p><strong>Sewing</strong><br>Duration: 6 months | Price: R1500</p>
+    <a href="sewing.html" class="learn-more">Learn More</a>
+  </div>
+
+  <div class="course">
+    <img src="IMAGE/LANDSCAPING.png" alt="Landscaping" />
+    <button class="add-to-cart" data-id="landscaping" data-name="Landscaping" data-price="1500">Add to Cart</button>
+    <p><strong>Landscaping</strong><br>Duration: 6 months | Price: R1500</p>
+    <a href="landscaping.html" class="learn-more">Learn More</a>
+  </div>
+
+  <div class="course">
+    <img src="IMAGE/LIFE-SKILLS.png" alt="Life Skills" />
+    <button class="add-to-cart" data-id="life-skills" data-name="Life Skills" data-price="1500">Add to Cart</button>
+    <p><strong>Life Skills</strong><br>Duration: 6 months | Price: R1500</p>
+    <a href="life-skills.html" class="learn-more">Learn More</a>
+  </div>
+</div>
+  </section>
+
+  <!-- Cart -->
+  <section class="cart-section smart-cart">
+    <h2>Shopping Cart</h2>
+    <div class="cart-items"></div>
+    <div class="cart-summary"></div>
+  </section>
+
+  <!-- Checkout -->
+  <section class="checkout smart-checkout">
+    <h2>Checkout</h2>
+    <form id="checkoutForm">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required /><br />
+      <input type="tel" placeholder="Phone Number" required />
+      <input type="text" placeholder="Card Info" required /><br />
+      <button type="submit">Confirm & Pay</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-top container">
+    <div class="footer-brand">
+      <img src="IMAGE/our-logo.png" alt="Empowering the Nation Logo" />
+      <h3>Empowering the Nation</h3>
+    </div>
+
+    <div class="footer-links">
+      <a href="contact.html">Contact Us</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+
+    <div class="footer-newsletter">
+      <label for="newsletter">Newsletter Sign-Up</label>
+      <form>
+        <input type="email" id="newsletter" placeholder="Enter your email" required />
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://twitter.com" target="_blank" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 <strong>Empowering the Nation</strong> | Powered by <strong>DIGI-CYNERGY</strong></p>
+  </div>
+</footer>
+
+  <!-- JavaScript -->
+ <script src="script.js"></script>
+
+</body>
+</html>

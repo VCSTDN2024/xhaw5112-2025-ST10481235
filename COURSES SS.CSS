@@ -1,0 +1,168 @@
+/* Layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-wrapper {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: #007BFF;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h2 {
+  margin: 0;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main Container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.container h1 {
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+/* Flex layout for content and image */
+.content-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.course-content {
+  flex: 1 1 450px;
+  min-width: 300px;
+}
+
+.course-image {
+  flex: 1 1 400px;
+  min-width: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-image img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* List styling */
+.container ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.container li {
+  margin-bottom: 8px;
+}
+
+/* Buttons */
+button {
+  background-color: #0ea5e9;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0369a1;
+}
+
+/* Footer */
+footer.site-footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  margin-top: auto;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-icons a {
+  margin: 0 8px;
+  color: white;
+  font-size: 18px;
+}
+
+
+/* Social Media Section */
+.social-media {
+  margin-top: 12px;
+  margin-bottom: 8px;
+  font-size: 1.8em;
+}
+
+.social-media a {
+  margin: 0 10px;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+
+
+/* Hover effects */
+.social-media a:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+/* Responsive for small devices */
+@media (max-width: 700px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .course-content, .course-image {
+    min-width: 100%;
+  }
+
+  .course-image img {
+    width: 100%;
+    max-width: 100%;
+  }
+}

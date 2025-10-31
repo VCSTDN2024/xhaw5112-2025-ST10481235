@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart - Empowering the Nation</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="cart.css" />
+  
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header>
+      <img src="IMAGE/our-logo.png" alt="DIGI-CYNERGY Logo" />
+      <nav>
+        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="courses.html"><i class="fa-solid fa-graduation-cap"></i> Courses</a>
+        <a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a>
+        <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+      </nav>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+      <h2>Your Shopping Cart</h2>
+      <div class="cart-container">
+        <div class="cart-items"></div>
+        <div class="cart-total"></div>
+        <button id="checkout-btn">Confirm & Pay</button>
+      </div>
+    </section>
+
+    <!-- Discount Info Section -->
+    <section class="discount-info">
+      <h3>Course Discount Policy</h3>
+      <p>Customers (employers or employees) can select from a range of courses available. They can select more than one course. The more courses the customers select, the more discount they receive:</p>
+      <ul>
+        <li>One course – no discount</li>
+        <li>Two courses – 5% discount</li>
+        <li>Three courses – 10% discount</li>
+        <li>More than three courses – 15% discount</li>
+      </ul>
+    </section>
+
+    <!-- Back Button -->
+    <div class="back-button">
+      <button class="btn-primary" onclick="location.href='index.html'">Back to Home</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+ <footer class="site-footer">
+  <div class="footer-top container">
+    <div class="footer-brand">
+      <img src="IMAGE/our-logo.png" alt="Empowering the Nation Logo" />
+      <h3>Empowering the Nation</h3>
+    </div>
+
+    <div class="footer-links">
+      <a href="contact.html">Contact Us</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+
+
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://twitter.com" target="_blank" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 <strong>Empowering the Nation</strong> | Powered by <strong>DIGI-CYNERGY</strong></p>
+  </div>
+</footer>
+  <!-- Cart Logic -->
+  <script>
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    const cartItemsDiv = document.querySelector('.cart-items');
+    const cartTotalDiv = document.querySelector('.cart-total');
+    const checkoutBtn = document.getElementById('checkout-btn');
+
+    function renderCart() {
+      cartItemsDiv.innerHTML = '';
+      cartTotalDiv.innerHTML = '';
+      if (cart.length === 0) {
+        cartItemsDiv.innerHTML = '<p><em>Your cart is empty.</em></p>';
+        checkoutBtn.disabled = true;
+        return;
+      }
+
+      let total = 0;
+      const ul = document.createElement('ul');
+
+      cart.forEach((item, index) => {
+        total += item.price;
+
+        const li = document.createElement('li');
+        li.innerHTML = `
+          ${item.name} - R${item.price.toFixed(2)}
+          <button onclick="removeItem(${index})">Remove</button>
+        `;
+        ul.appendChild(li);
+      });
+
+      // Apply discount
+      let discountRate = 0;
+      if (cart.length === 2) discountRate = 0.05;
+      else if (cart.length === 3) discountRate = 0.10;
+      else if (cart.length > 3) discountRate = 0.15;
+
+      const discountAmount = total * discountRate;
+      const finalTotal = total - discountAmount;
+
+      cartItemsDiv.appendChild(ul);
+      cartTotalDiv.innerHTML = `
+        <p><strong>Subtotal: R${total.toFixed(2)}</strong></p>
+        <p><strong>Discount (${(discountRate * 100).toFixed(0)}%): -R${discountAmount.toFixed(2)}</strong></p>
+        <p><strong>Total: R${finalTotal.toFixed(2)}</strong></p>
+      `;
+      checkoutBtn.disabled = false;
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+    }
+
+    checkoutBtn.addEventListener('click', () => {
+      if (cart.length === 0) return;
+
+      alert("Thank you for your payment!");
+      cart = [];
+      localStorage.removeItem('cart');
+      renderCart();
+    });
+
+    renderCart();
+  </script>
+</body>
+</html>

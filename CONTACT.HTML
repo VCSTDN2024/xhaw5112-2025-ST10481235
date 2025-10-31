@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Empowering the Nation</title>
+  <link rel="stylesheet" href="CONTACT.CSS" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header>
+      <h2>Empowering The Nation</h2>
+      <nav>
+        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="courses.html"><i class="fa-solid fa-graduation-cap"></i> Courses</a>
+        <a href="about.html"><i class="fa-solid fa-circle-info"></i> About Us</a>
+        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+      </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-details container">
+      <h1>Contact Us</h1>
+      <p style="font-size: 1.1em;">
+        We'd love to hear from you! Whether you have questions about our courses, want to visit one of our training centres, or simply need guidance on how to get started—our team is here to help.
+      </p>
+
+      <p><strong>Phone:</strong> 011 123 4567</p>
+      <p><strong>Email:</strong> <a href="mailto:info@empoweringnation.org.za">info@empoweringnation.org.za</a></p>
+
+      <h3>Our Venues in Johannesburg:</h3>
+      <select id="venue-select">
+        <option value="">Select a venue</option>
+        <option value="soweto">Soweto Training Centre</option>
+        <option value="sandton">Sandton Skills Hub</option>
+        <option value="alexandra">Alexandra Empowerment Zone</option>
+      </select>
+
+      <div id="map-container" class="map-container" style="margin-top: 20px;"></div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+  <div class="footer-top container">
+    <div class="footer-brand">
+      <img src="IMAGE/our-logo.png" alt="Empowering the Nation Logo" />
+      <h3>Empowering the Nation</h3>
+    </div>
+
+    <div class="footer-links">
+      <a href="contact.html">Contact Us</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+
+
+    <div class="footer-social">
+      <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://twitter.com" target="_blank" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 <strong>Empowering the Nation</strong> | Powered by <strong>DIGI-CYNERGY</strong></p>
+  </div>
+</footer>
+
+  <!-- Map Script -->
+  <script>
+    document.getElementById('venue-select').addEventListener('change', function () {
+      const venue = this.value;
+      let mapEmbed = '';
+
+      if (venue === 'soweto') {
+        mapEmbed = '<iframe src="https://maps.google.com/maps?q=Soweto%2C%20Johannesburg&output=embed" width="100%" height="300" style="border:0;" allowfullscreen></iframe>';
+      } else if (venue === 'sandton') {
+        mapEmbed = '<iframe src="https://maps.google.com/maps?q=Sandton%2C%20Johannesburg&output=embed" width="100%" height="300" style="border:0;" allowfullscreen></iframe>';
+      } else if (venue === 'alexandra') {
+        mapEmbed = '<iframe src="https://maps.google.com/maps?q=Alexandra%2C%20Johannesburg&output=embed" width="100%" height="300" style="border:0;" allowfullscreen></iframe>';
+      }
+
+      document.getElementById('map-container').innerHTML = mapEmbed;
+    });
+  </script>
+</body>
+</html>
