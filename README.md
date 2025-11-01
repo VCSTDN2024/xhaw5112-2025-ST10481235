@@ -1,10 +1,11 @@
-Student App — Digi-Cynergy Project
-Project Overview
+# Digi-Cynergy Project
 
-This project was developed by Team Digi-Cynergy as part of the Empowering the Nation initiative for the XHAW5112 2025 module.
+**Project Overview**
+
+This assignment was developed by Digi-Cynergy as part of the Empowering the Nation initiative for the XHAW5112 2025 module.
 The application provides a digital solution to improve student engagement, accessibility, and communication through a user-friendly mobile interface.
 
-The solution includes:
+**The solution includes:**
 
 A mobile application developed in React Native (using Expo and TypeScript)
 
@@ -12,10 +13,10 @@ Seamless navigation between screens
 
 A clean, responsive, and user-centered interface
 
-Project Repository
+**Project Repository**
 
-You can view or clone the project from the following GitHub repository:
-https://github.com/VCSTDN2024/xhaw5112-2025-ST10481235.git
+ GitHub repository:
+
 
 App Features
 
