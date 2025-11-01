@@ -1,10 +1,11 @@
-Student App — Digi-Cynergy Project
-Project Overview
+# Digi-Cynergy Project
 
-This project was developed by Team Digi-Cynergy as part of the Empowering the Nation initiative for the XHAW5112 2025 module.
+**Project Overview**
+
+This project was created by **Digi-Cynergy** as part of the Empowering the Nation initiative for the XHAW5112 2025 module.
 The application provides a digital solution to improve student engagement, accessibility, and communication through a user-friendly mobile interface.
 
-The solution includes:
+**The solution includes:**
 
 A mobile application developed in React Native (using Expo and TypeScript)
 
@@ -12,12 +13,10 @@ Seamless navigation between screens
 
 A clean, responsive, and user-centered interface
 
-Project Repository
+**Github Repository**
+ GitHub repository:https://github.com/VCSTDN2024/xhaw5112-2025-ST10481235/tree/main
 
-You can view or clone the project from the following GitHub repository:
-https://github.com/VCSTDN2024/xhaw5112-2025-ST10481235.git
-
-App Features
+**App Features**
 
 Simple and clean Home Screen layout
 
@@ -29,8 +28,8 @@ Consistent color theme and responsive design
 
 Fully compatible with Expo for easy development and testing
 
-Development Process
-Tools Used
+**Development Process**
+**Tools that were used**
 
 React Native (Expo) – for cross-platform app development
 
@@ -42,7 +41,7 @@ Visual Studio Code – used as the main code editor
 
 GitHub – for version control and collaboration
 
-Design Approach
+**Design Approach**
 
 The design followed a User-Centered Design (UCD) methodology. Wireframes and visual components were created based on student feedback to ensure accessibility and usability.
 The design principles focused on:
@@ -65,25 +64,26 @@ Testing: Tested app functionality and navigation using Expo
 
 Deployment: Published and shared the final version on GitHub
 
-App Structure
+**App Structure**
 /App.tsx                → Main application entry point
 /package.json           → Project dependencies and configuration
 /assets/                → Images, icons, and logos
 /screens/               → Application screen files
 
-Screens
+**Screens**
 
 HomeScreen.tsx – Displays the main interface and navigation option
 
 ContactScreen.tsx – Contains navigation back to the Home screen
 
-Development Team — Digi-Cynergy
-Team Member	Student Number
-Blessing	ST10481791
-Khumalo	ST10469550
-Mpho	ST10471293
-Anthony	ST10481235
-References
+# Digi- Cynergy Team
+**Team Members**
+Blessing- ST10481791
+Khumalo- ST10469550
+Mpho- ST10471293
+Anthony- ST10481235
+
+**References**
 
 Image(s) and design inspiration were sourced from:
-Unsplash. (n.d.). Free stock photos and visuals. Retrieved from https://unsplash.com
+Unsplash. (n.d.). Free stock photos and visuals.https://unsplash.com/ [Accessed 31 October 2025]
