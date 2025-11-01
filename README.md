@@ -11,7 +11,7 @@ The website was developed in React Native with easy navigation between each scre
 A clean, responsive, and user-centered interface.
 
 **Github Repository**
- GitHub repository:https://github.com/VCSTDN2024/xhaw5112-2025-ST10481235/tree/main
+ GitHub repository:https://github.com/VCSTDN2024/xhaw5112-2025-ST10481235/tree/website1
 
 **App Features**
 
